@@ -114,3 +114,17 @@ gen
 !/Dockerfile
 !/.idea/
 !/Logs/
+/.idea/.gitignore
+/.idea/codeStyles/Project.xml
+/Back-end/.mvn/wrapper/maven-wrapper.jar
+/Back-end/mvnw
+/.idea/vcs.xml
+/Back-end/mvnw.cmd
+/Back-end/.mvn/wrapper/maven-wrapper.properties
+/.idea/jarRepositories.xml
+/.idea/encodings.xml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/modules.xml
+/.idea/misc.xml
+/.idea/compiler.xml
+/Back-end/.mvn/wrapper/maven-wrapper.jar
