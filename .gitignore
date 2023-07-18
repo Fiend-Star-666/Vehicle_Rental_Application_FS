@@ -128,3 +128,17 @@ gen
 /.idea/misc.xml
 /.idea/compiler.xml
 /Back-end/.mvn/wrapper/maven-wrapper.jar
+/Back-end/.mvn/wrapper/maven-wrapper.jar
+/Back-end/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/Back-end/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/Back-end/target/surefire-reports/TEST-com.intern.SpringSecurityJpaApplicationTests.xml
+/Back-end/target/surefire-reports/TEST-com.intern.CarRentalApplicationTests.xml
+/Back-end/target/maven-archiver/pom.properties
+/Back-end/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/Back-end/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/Back-end/target/classes/database.sql
+/Back-end/target/surefire-reports/com.intern.SpringSecurityJpaApplicationTests.txt
+/Back-end/target/surefire-reports/com.intern.CarRentalApplicationTests.txt
+/Back-end/target/Car-Rental-0.0.1-SNAPSHOT.jar.original
+/Back-end/target/test-classes/application-test.properties
+/Back-end/target/classes/application.properties
