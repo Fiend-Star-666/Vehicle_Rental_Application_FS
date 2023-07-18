@@ -127,8 +127,6 @@ gen
 /.idea/modules.xml
 /.idea/misc.xml
 /.idea/compiler.xml
-/Back-end/.mvn/wrapper/maven-wrapper.jar
-/Back-end/.mvn/wrapper/maven-wrapper.jar
 /Back-end/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 /Back-end/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
 /Back-end/target/surefire-reports/TEST-com.intern.SpringSecurityJpaApplicationTests.xml
