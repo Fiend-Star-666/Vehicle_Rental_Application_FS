@@ -95,7 +95,7 @@ public class ServicesTesting {
 //		// CarRentalSystem test
 //		carrentalsystem1 = new CarRentalSystem();
 //		carrentalsystem1.setCarRentalLocation(new ArrayList<>());
-//		carrentalsystem1.setName("BOOM CARS");
+//		carrentalsystem1.setName("Turbo CARS");
 //		carRentalSystemRepo.save(carrentalsystem1);
 //
 //	}

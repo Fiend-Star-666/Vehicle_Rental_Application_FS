@@ -20,7 +20,7 @@ export default class FrontPage extends Component {
                             <br></br>
                             <br></br>
                             <br></br>
-                            <h1 id="home-headline" style={{textShadow: '2px 2px'}}>BoomCar</h1>
+                            <h1 id="home-headline" style={{textShadow: '2px 2px'}}>Turbo</h1>
                             <p>We're India's newest Vehicle Rental Solution.<br></br> Small or big, you can Rent any
                                 type of Vehicle.</p>
                         </Col>
@@ -40,7 +40,7 @@ export default class FrontPage extends Component {
                                 <Card.Body>
                                     <Card.Img src={Contact} alt="Contact" style={{maxWidth: "180px", height: "190px"}}/>
                                     <Card.Title className="orange ">Set up your Account</Card.Title>
-                                    <Card.Text>Join BoomCar today to rent a Vehicle. Set up your account to view the
+                                    <Card.Text>Join Turbo today to rent a Vehicle. Set up your account to view the
                                         vehicle catalog and track your Reservations.</Card.Text>
                                 </Card.Body>
                             </Card>

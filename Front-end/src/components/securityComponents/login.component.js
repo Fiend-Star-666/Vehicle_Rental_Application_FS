@@ -49,10 +49,10 @@ export default class Login extends Component {
         AuthService.login(loginDetails).then(
             () => {
                 const currentUser = AuthService.getCurrentUser();
-                if (currentUser.roles == "ROLE_ADMIN") {
+                if (currentUser.roles === "ROLE_ADMIN") {
                     this.props.history.push("/admin");
                 }
-                if (currentUser.roles == "ROLE_USER") {
+                if (currentUser.roles === "ROLE_USER") {
                     this.props.history.push("/user");
                 }
                 window.location.reload();

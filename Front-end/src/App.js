@@ -1,28 +1,28 @@
 import './App.css';
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
-import CreateVehicleComponent from './components/CreateVehicleComponent';
-import ListVehicleComponents from './components/ListVehicleComponents';
-import ViewVehicleComponent from './components/ViewVehicleComponent';
-import ViewVehicleLogComponent from './components/ViewVehicleLogComponent';
-import ViewParkingStallComponent from './components/ViewParkingStallComponent';
-import ViewCRLocationForComponent from './components/ViewCRLocationForVehicleComponent';
-import ListVehicleOfCRLocationComponents from './components/ListVehicleOfCRlLocationComponents';
-import ListCRLocationComponents from './components/ListCRLocationComponents';
-import ViewCRSystemComponent from './components/ViewCRSystemComponent';
-import ViewAllAccountsViaAdmin from './components/ViewAllAccountsViaAdmin';
-import ViewPersonalInfoAccount from './components/ViewPersonalInfoAccount';
-import ViewReservationAccount from './components/ViewReservationAccount';
-import ListVehicleReservationsAll from './components/ListVehicleReservationsAll';
-import ListVehicleReservationPerCRLocation from './components/ListVehicleReservationPerCRLocation';
-import CreateAccountMember from './components/CreateAccountMember';
-import CreateCRLocation from './components/CreateCRLocation';
-import CreateVehicleReservation from './components/CreateVehicleReservation';
-import ViewBillComponentVRID from './components/ViewBillComponentsVRID';
-import ViewBillItem from './components/ViewBillItem';
-import CreateAccountReceptionist from './components/CreateAccountReceptionist';
-import Home from './components/Home';
-import CreateVehicleLogComponent from './components/CreateVehicleLog';
+import CreateVehicleComponent from './components/Vehicle/CreateVehicleComponent';
+import ListVehicleComponents from './components/Vehicle/ListVehicleComponents';
+import ViewVehicleComponent from './components/Vehicle/ViewVehicleComponent';
+import ViewVehicleLogComponent from './components/VehicleReservation/ViewVehicleLogComponent';
+import ViewParkingStallComponent from './components/ParkingStall/ViewParkingStallComponent';
+import ViewCRLocationForComponent from './components/VehicleRentalLocation/ViewCRLocationForVehicleComponent';
+import ListVehicleOfCRLocationComponents from './components/VehicleRentalLocation/ListVehicleOfCRlLocationComponents';
+import ListCRLocationComponents from './components/VehicleRentalLocation/ListCRLocationComponents';
+import ViewCRSystemComponent from './components/VehicleRentalSystem/ViewCRSystemComponent';
+import ViewAllAccountsViaAdmin from './components/Account/ViewAllAccountsViaAdmin';
+import ViewPersonalInfoAccount from './components/Account/ViewPersonalInfoAccount';
+import ViewReservationAccount from './components/VehicleReservation/ViewReservationAccount';
+import ListVehicleReservationsAll from './components/VehicleReservation/ListVehicleReservationsAll';
+import ListVehicleReservationPerCRLocation from './components/VehicleReservation/ListVehicleReservationPerCRLocation';
+import CreateAccountMember from './components/Account/CreateAccountMember';
+import CreateCRLocation from './components/VehicleRentalLocation/CreateCRLocation';
+import CreateVehicleReservation from './components/VehicleReservation/CreateVehicleReservation';
+import ViewBillComponentVRID from './components/Bill/ViewBillComponentsVRID';
+import ViewBillItem from './components/Bill/ViewBillItem';
+import CreateAccountReceptionist from './components/Account/CreateAccountReceptionist';
+import Home from './components/Common/Home';
+import CreateVehicleLogComponent from './components/VehicleRentalSystem/CreateVehicleLog';
 import AuthService from './services/auth.service';
 import SLogin from './components/securityComponents/login.component';
 import Profile from './components/securityComponents/profile.component';
@@ -30,16 +30,16 @@ import BoardAdmin from './components/securityComponents/board-admin.component';
 import BoardUser from './components/securityComponents/board-user.component';
 import Register from './components/securityComponents/register.component';
 import EventBus from './common/EventBus';
-import UpdateVehicleLog from './components/UpdateVehicleLog';
+import UpdateVehicleLog from './components/Vehicle/UpdateVehicleLog';
 import Logo from "./icons/logo.svg";
 
 
-import error from './components/error';
-import ForgotPassword from './components/ForgotPassword'
-import ViewPricing from './components/ViewPricing';
-import Catalog from './components/Catalog';
-import AboutUs from './components/AboutUs';
-import {NikeCard} from './components/NikeCard';
+import error from './components/Common/error';
+import ForgotPassword from './components/Common/ForgotPassword'
+import ViewPricing from './components/Pricing/ViewPricing';
+import Catalog from './components/Pages/Catalog';
+import AboutUs from './components/Pages/AboutUs';
+import {NikeCard} from './components/Pages/NikeCard';
 import Frontpage from "./components/securityComponents/frontpage";
 
 class App extends Component {
@@ -61,12 +61,12 @@ class App extends Component {
                 currentUser: user
             });
 
-            if (user.roles == "ROLE_ADMIN") {
+            if (user.roles === "ROLE_ADMIN") {
                 this.setState({
                     showAdminBoard: true,
                 })
             }
-            if (user.roles == "ROLE_USER") {
+            if (user.roles === "ROLE_USER") {
                 this.setState({
                     showUserBoard: true
                 });
