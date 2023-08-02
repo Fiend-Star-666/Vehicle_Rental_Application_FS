@@ -22,7 +22,7 @@ public class MyUserDetailsService implements UserDetailsService {
         Account user = accountRepo.findByPersonEmail(emailId);
 //        Account user = accountRepo.findByPersonEmail("admin007@gmail.com");
 
-        System.out.println("loadbyusername in myuserdetailsService user: "+user);
+        System.out.println("loadbyusername in myuserdetailsService user: "+user.toString());
 
         if(user==null){
 
@@ -30,6 +30,7 @@ public class MyUserDetailsService implements UserDetailsService {
         }
         
 		MyUserDetails userDetails=new MyUserDetails(user);
+        
         return userDetails;
 		
 

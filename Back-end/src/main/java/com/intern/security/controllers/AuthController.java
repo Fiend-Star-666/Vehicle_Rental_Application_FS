@@ -3,8 +3,11 @@ package com.intern.security.controllers;
 import com.intern.DAO.AccountRepository;
 import com.intern.security.MyUserDetailsService;
 import com.intern.security.jpaModels.MyUserDetails;
+import com.intern.security.jwt.AuthEntryPointJwt;
 import com.intern.security.jwt.JwtUtils;
 import com.intern.security.payload.JwtResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -25,6 +28,9 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/v1")
 public class AuthController {
 
+    private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
+
+
     @Autowired
     AuthenticationManager authenticationManager;
 
@@ -44,23 +50,25 @@ public class AuthController {
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@RequestBody Map<String, String> Payload) {
+        logger.info("Authenticating user");
         String emailId = (String) Payload.get("email");
-
+        logger.info("emailId: " + emailId);
         String password = (String) Payload.get("password");
-
+        logger.info("password: " + password);
         //UserDetails userDetails = userDetailsService.loadUserByUsername(emailId);
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(emailId, password));
-
+        logger.info("authentication: " + authentication);
         SecurityContextHolder.getContext().setAuthentication(authentication);
-
+        logger.info("SecurityContextHolder.getContext(): " + SecurityContextHolder.getContext());
         String jwt = jwtUtils.generateJwtToken(authentication);
-
+        logger.info("jwt: " + jwt);
         MyUserDetails userDetails = (MyUserDetails) authentication.getPrincipal();
-
+        logger.info("userDetails: " + userDetails);
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
-
+        logger.info("roles: " + roles);
+        logger.info("userDetails.getType(): " + userDetails.getType());
         return ResponseEntity.ok(new JwtResponse(jwt,
                 userDetails.getType(),
                 userDetails.getAccId(),
